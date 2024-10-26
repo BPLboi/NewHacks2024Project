@@ -12,3 +12,7 @@
 /home/boyan/Projects/NewHacks2024Project/obj/Debug/net8.0/NewHacks2024Project.pdb
 /home/boyan/Projects/NewHacks2024Project/obj/Debug/net8.0/NewHacks2024Project.genruntimeconfig.cache
 /home/boyan/Projects/NewHacks2024Project/obj/Debug/net8.0/ref/NewHacks2024Project.dll
+/home/boyan/Projects/NewHacks2024Project/obj/Debug/net8.0/NewHacks2024Project.sourcelink.json
+/home/boyan/Projects/NewHacks2024Project/bin/Debug/net8.0/Newtonsoft.Json.dll
+/home/boyan/Projects/NewHacks2024Project/obj/Debug/net8.0/NewHacks2024Project.csproj.AssemblyReference.cache
+/home/boyan/Projects/NewHacks2024Project/obj/Debug/net8.0/NewHacks2024Project.csproj.CopyComplete
