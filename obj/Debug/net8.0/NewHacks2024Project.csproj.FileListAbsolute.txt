@@ -1,0 +1,14 @@
+/home/boyan/Projects/NewHacks2024Project/bin/Debug/net8.0/NewHacks2024Project
+/home/boyan/Projects/NewHacks2024Project/bin/Debug/net8.0/NewHacks2024Project.deps.json
+/home/boyan/Projects/NewHacks2024Project/bin/Debug/net8.0/NewHacks2024Project.runtimeconfig.json
+/home/boyan/Projects/NewHacks2024Project/bin/Debug/net8.0/NewHacks2024Project.dll
+/home/boyan/Projects/NewHacks2024Project/bin/Debug/net8.0/NewHacks2024Project.pdb
+/home/boyan/Projects/NewHacks2024Project/obj/Debug/net8.0/NewHacks2024Project.GeneratedMSBuildEditorConfig.editorconfig
+/home/boyan/Projects/NewHacks2024Project/obj/Debug/net8.0/NewHacks2024Project.AssemblyInfoInputs.cache
+/home/boyan/Projects/NewHacks2024Project/obj/Debug/net8.0/NewHacks2024Project.AssemblyInfo.cs
+/home/boyan/Projects/NewHacks2024Project/obj/Debug/net8.0/NewHacks2024Project.csproj.CoreCompileInputs.cache
+/home/boyan/Projects/NewHacks2024Project/obj/Debug/net8.0/NewHacks2024Project.dll
+/home/boyan/Projects/NewHacks2024Project/obj/Debug/net8.0/refint/NewHacks2024Project.dll
+/home/boyan/Projects/NewHacks2024Project/obj/Debug/net8.0/NewHacks2024Project.pdb
+/home/boyan/Projects/NewHacks2024Project/obj/Debug/net8.0/NewHacks2024Project.genruntimeconfig.cache
+/home/boyan/Projects/NewHacks2024Project/obj/Debug/net8.0/ref/NewHacks2024Project.dll
