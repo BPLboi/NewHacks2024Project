@@ -1,9 +1,18 @@
 {
     "contents": [
         {
+            "role": "user",
             "parts": [
                 {
-                    "text": "Explain how AI works"
+                    "text": ""
+                }
+            ]
+        },
+        {
+            "role": "model",
+            "parts": [
+                {
+                    "text": ""
                 }
             ]
         }
