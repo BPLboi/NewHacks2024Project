@@ -3,11 +3,11 @@ class Program
     static async Task Main(string[] args)
     {
         //Sets up all the different kinds of card attacks
-        PhishingCards phish = new PhishingCards(3);
-        FingerprintingCards fingerprint = new FingerprintingCards(2);
-        HackCards hack = new HackCards(2);
-        PITMCards pitm = new PITMCards(2);
-        MetadataCards metadata = new MetadataCards(3);
+        PhishingCards phish = new PhishingCards(1);
+        FingerprintingCards fingerprint = new FingerprintingCards(1);
+        HackCards hack = new HackCards(1);
+        PITMCards pitm = new PITMCards(1);
+        MetadataCards metadata = new MetadataCards(1);
 
         Deck cardDeck = new Deck([phish, fingerprint, hack, pitm, metadata], 4);
 

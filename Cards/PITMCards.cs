@@ -21,7 +21,6 @@ public class PITMCards : CardType // Person in the middle
         if (npc.defenses.Contains("Uses end-to-end encryption"))
         {
             Console.WriteLine($"Uh-oh; {npc.npcName} uses end-to-end encryption so your attack failed.");
-            numberLeft -= 1;
             return printMoney(false);
         }
 

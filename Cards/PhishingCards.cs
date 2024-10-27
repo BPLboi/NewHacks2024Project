@@ -13,6 +13,7 @@ public class PhishingCards : CardType
 
     override public async Task<int> cardAction(NPC npc)
     {
+        numberLeft -= 1;
         Console.WriteLine($"Write a message that convinces {npc.npcName} to give you 5,000 USD!\n");
         GeminiRequester requester = new GeminiRequester();
 
@@ -41,7 +42,6 @@ Provide it in EXACTLY the following format. You do not chat with the user, you o
             catch
             {
                 Console.WriteLine("Out of bounds error in phishing attack. Message resieved was: \n" + geminiMsg);
-                numberLeft -= 1;
                 return printMoney(false);
             }
 
@@ -53,13 +53,11 @@ Provide it in EXACTLY the following format. You do not chat with the user, you o
             }
             else
             {
-                numberLeft -= 1;
                 Console.WriteLine("Congratulations on getting that dough!");
                 return printMoney(5000);
             }
         }
 
-        numberLeft -= 1;
         Console.WriteLine($"{npc.npcName} has stopped responding. Challenge failed.");
         return 0;
     }
