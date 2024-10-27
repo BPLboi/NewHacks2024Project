@@ -31,7 +31,7 @@ Our initial plan was to create a full 2D playable version of the game, but due t
 
 Since our goal was to create a Unity project, our code is written in C#. We used Google's Gemini API for a variety of interactive elements, including generating unique character descriptions and responding to player input.
 
-## ▶️ Next Steps
+## 🚀 Next Steps
 
 - Create playable 2D platformer game in Unity
 - Enable attacks against organizations instead of just individuals, using different attack types eg. SQL Injection
