@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "bIIMoEXEez6TjrnSg+3/l9A4QWV6+esNdRm6LY2JHpGPEJ6VED5onumNGEKG7AwzkFgi0JY1nL0AzQMm+g5TUQ==",
+  "dgSpecHash": "6VVRg/H9IEEhj83qE815InYSfg2ZdBL3c1A5+C4skdw5CKmgqMp8nVcLlZoiG+JFG7rJgcSFVGPfstVVzEdr4Q==",
   "success": true,
-  "projectFilePath": "/home/boyan/Projects/NewHacks2024Project/NewHacks2024Project.csproj",
+  "projectFilePath": "/Users/ayushiagrawal/Documents/UofT/2 2T4F/NewHacks/Spam game project/cliGame/NewHacks2024Project/NewHacks2024Project.csproj",
   "expectedPackageFiles": [
-    "/home/boyan/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512"
+    "/Users/ayushiagrawal/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512"
   ],
   "logs": []
 }
