@@ -1,9 +1,5 @@
-﻿using System;
-using System.Net.Http;
-using System.Net.Http.Headers;
-using System.Runtime.InteropServices;
+﻿using System.Net.Http.Headers;
 using System.Text;
-using Microsoft.VisualBasic;
 using Newtonsoft.Json;
 
 public class GeminiRequester
@@ -12,17 +8,18 @@ public class GeminiRequester
     WriteRoot conversation;
     public GeminiRequester()
     {
+        //Sets up the client to make requests
         client = new HttpClient();
         client.BaseAddress = new Uri("https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=AIzaSyAQ8Wpm67Xf2sWgKHtv5YGaBJVnY0sT2CI");
         client.DefaultRequestHeaders.Accept.Clear();
         client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
+        //Sets up the conversation log
         string filePath = "./gemini.json";
         string json = File.ReadAllText(filePath);
         conversation = JsonConvert.DeserializeObject<WriteRoot>(json);
 
-        conversation.contents[0].parts.RemoveAt(0);
-        // conversation.contents[1].parts.RemoveAt(0);
+        conversation.contents.RemoveAt(0);
     }
 
 
@@ -31,10 +28,13 @@ public class GeminiRequester
         //Adds the message to the json request
         Part msg = new Part();
         msg.text = inputMsg;
-        conversation.contents[0].parts.Insert(0, msg);
+        Content roleMsg = new Content();
+        roleMsg.role = "user";
+        roleMsg.parts = [msg];
+
+        conversation.contents.Add(roleMsg);
         string jsonString = JsonConvert.SerializeObject(conversation);
 
-        Console.WriteLine(jsonString);
 
         //Sends an HTTP request
         var content = new StringContent(jsonString, Encoding.UTF8, "application/json");
@@ -43,22 +43,22 @@ public class GeminiRequester
         //Gets a response
         var responseData = await response.Content.ReadAsStringAsync();
         Response responseVariable = JsonConvert.DeserializeObject<Response>(responseData);
-        Console.WriteLine(responseData);
-
-        Part responseMsg = responseVariable.candidates[0].content.parts[0];
+        Content responseContent = responseVariable.candidates[0].content;
 
         //Stores the response in the conversation
-        if (conversation.contents[1].parts[0].Equals(""))
-        {
-            conversation.contents[1].parts[0] = responseMsg;
-        }
-        else
-        {
-            conversation.contents[1].parts.Insert(0, responseMsg);
-        }
+        conversation.contents.Add(responseContent);
 
         //Returns the response text
-        return responseMsg.text;
+        try
+        {
+            return responseContent.parts[0].text;
+        }
+        catch
+        {
+            Console.WriteLine("Request produced an error. Raw response data: \n" + responseData);
+            return null;
+
+        }
     }
 }
 public class WriteRoot

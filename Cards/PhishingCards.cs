@@ -33,14 +33,22 @@ Provide it in EXACTLY the following format. You do not chat with the user, you o
         for (int i = 0; i < tries && spamLevel < 5; i++)
         {
             string inputMsg = Console.ReadLine();
-            string geminiMsg = await requester.message("John's email: \"" + inputMsg + "\"");
-            Console.WriteLine(geminiMsg);
+            string geminiMsg = await requester.message(inputMsg);
+
             String[] responseLines = geminiMsg.Split(['|']);
-            (outputMsg, spamLevel) = (responseLines[0].Trim(), Int32.Parse(responseLines[1].Trim()));
+            try
+            {
+                (outputMsg, spamLevel) = (responseLines[0].Trim(), Int32.Parse(responseLines[1].Trim()));
+            }
+            catch
+            {
+                Console.WriteLine("Out of bounds error in phishing attack. Message resieved was: \n" + geminiMsg);
+                numberLeft -= 1;
+                return 0;
+            }
 
-
-            Console.WriteLine($"Barbara says: \"{outputMsg}\"");
-            Console.WriteLine($"For debugging purposes, spamLevel:{spamLevel}");
+            Console.WriteLine($"-----------------------\n{outputMsg}\n------------------------\n");
+            // Console.WriteLine($"For debugging purposes, spamLevel:{spamLevel}");
             if (spamLevel < 5)
             {
                 Console.WriteLine("Uh-oh. You were a bit too abrupt, and Barbara got suspicious. Try again!\n");
@@ -55,7 +63,6 @@ Provide it in EXACTLY the following format. You do not chat with the user, you o
         }
 
         numberLeft -= 1;
-        difficulty++;
         Console.WriteLine("Barbara has stopped responding. Challenge failed.");
         return 0;
     }
