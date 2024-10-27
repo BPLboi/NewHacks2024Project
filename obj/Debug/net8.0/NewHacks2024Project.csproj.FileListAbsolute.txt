@@ -16,3 +16,21 @@
 /home/boyan/Projects/NewHacks2024Project/bin/Debug/net8.0/Newtonsoft.Json.dll
 /home/boyan/Projects/NewHacks2024Project/obj/Debug/net8.0/NewHacks2024Project.csproj.AssemblyReference.cache
 /home/boyan/Projects/NewHacks2024Project/obj/Debug/net8.0/NewHacks2024Project.csproj.CopyComplete
+/Users/ayushiagrawal/Documents/UofT/2 2T4F/NewHacks/Spam game project/cliGame/NewHacks2024Project/bin/Debug/net8.0/NewHacks2024Project
+/Users/ayushiagrawal/Documents/UofT/2 2T4F/NewHacks/Spam game project/cliGame/NewHacks2024Project/bin/Debug/net8.0/NewHacks2024Project.deps.json
+/Users/ayushiagrawal/Documents/UofT/2 2T4F/NewHacks/Spam game project/cliGame/NewHacks2024Project/bin/Debug/net8.0/NewHacks2024Project.runtimeconfig.json
+/Users/ayushiagrawal/Documents/UofT/2 2T4F/NewHacks/Spam game project/cliGame/NewHacks2024Project/bin/Debug/net8.0/NewHacks2024Project.dll
+/Users/ayushiagrawal/Documents/UofT/2 2T4F/NewHacks/Spam game project/cliGame/NewHacks2024Project/bin/Debug/net8.0/NewHacks2024Project.pdb
+/Users/ayushiagrawal/Documents/UofT/2 2T4F/NewHacks/Spam game project/cliGame/NewHacks2024Project/bin/Debug/net8.0/Newtonsoft.Json.dll
+/Users/ayushiagrawal/Documents/UofT/2 2T4F/NewHacks/Spam game project/cliGame/NewHacks2024Project/obj/Debug/net8.0/NewHacks2024Project.csproj.AssemblyReference.cache
+/Users/ayushiagrawal/Documents/UofT/2 2T4F/NewHacks/Spam game project/cliGame/NewHacks2024Project/obj/Debug/net8.0/NewHacks2024Project.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ayushiagrawal/Documents/UofT/2 2T4F/NewHacks/Spam game project/cliGame/NewHacks2024Project/obj/Debug/net8.0/NewHacks2024Project.AssemblyInfoInputs.cache
+/Users/ayushiagrawal/Documents/UofT/2 2T4F/NewHacks/Spam game project/cliGame/NewHacks2024Project/obj/Debug/net8.0/NewHacks2024Project.AssemblyInfo.cs
+/Users/ayushiagrawal/Documents/UofT/2 2T4F/NewHacks/Spam game project/cliGame/NewHacks2024Project/obj/Debug/net8.0/NewHacks2024Project.csproj.CoreCompileInputs.cache
+/Users/ayushiagrawal/Documents/UofT/2 2T4F/NewHacks/Spam game project/cliGame/NewHacks2024Project/obj/Debug/net8.0/NewHacks2024Project.sourcelink.json
+/Users/ayushiagrawal/Documents/UofT/2 2T4F/NewHacks/Spam game project/cliGame/NewHacks2024Project/obj/Debug/net8.0/NewHacks2024Project.csproj.CopyComplete
+/Users/ayushiagrawal/Documents/UofT/2 2T4F/NewHacks/Spam game project/cliGame/NewHacks2024Project/obj/Debug/net8.0/NewHacks2024Project.dll
+/Users/ayushiagrawal/Documents/UofT/2 2T4F/NewHacks/Spam game project/cliGame/NewHacks2024Project/obj/Debug/net8.0/refint/NewHacks2024Project.dll
+/Users/ayushiagrawal/Documents/UofT/2 2T4F/NewHacks/Spam game project/cliGame/NewHacks2024Project/obj/Debug/net8.0/NewHacks2024Project.pdb
+/Users/ayushiagrawal/Documents/UofT/2 2T4F/NewHacks/Spam game project/cliGame/NewHacks2024Project/obj/Debug/net8.0/NewHacks2024Project.genruntimeconfig.cache
+/Users/ayushiagrawal/Documents/UofT/2 2T4F/NewHacks/Spam game project/cliGame/NewHacks2024Project/obj/Debug/net8.0/ref/NewHacks2024Project.dll

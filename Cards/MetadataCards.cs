@@ -43,14 +43,6 @@ public class MetadataCards : CardType
         switch (difficulty)
         {
             case 1:
-                //Generates a 'random name'
-                question = "What is the recipient's name?";
-                string[] names = ["Olivia", "Noah", "Emma", "Liam", "Ava", "Ethan", "Sophia", "Mason", "Isabella", "Jacob", "Charlotte", "William", "Mia", "Michael", "Evelyn", "Alexander", "Emily", "James", "Abigail", "Benjamin"];
-                answer = names[rn.Next(20)];
-                availableInfo = $"Hey {answer}, you busy rn?";
-
-                break;
-            case 2:
                 //generates a random DOB
                 question = "Can you figure out John's date of birth? (Answer in mm/dd/yyyy format)";
                 int year = rn.Next(40) + 1960;
@@ -60,13 +52,16 @@ public class MetadataCards : CardType
                 answer = (month).ToString() + "/" + (day).ToString() + "/" + year.ToString();
                 availableInfo = $"Happy {ordinal_suffix_of(offset)} birthday John!\nSent on {(month).ToString() + "/" + (day).ToString() + "/" + (year + offset).ToString()} at 4:13pm";
                 break;
-            case 3 or 4:
-                question = "Can you find out which address John is going to?";
+            case 2 or 3:
+                question = "Can you find out which city John lives in?";
                 GeminiRequester req = new GeminiRequester();
-                string coords = await req.message("pick a random latitude and longitude in north america and respond in EXACTLY the format [latitude],[longitude]");
+                string city = await req.message("Pick a random city and respond in EXACTLY the format [city]");
+                answer = city.Substring(1, city.Length - 2);
+                string coords = await req.message($"Return the latitude and longitude coordinates of {city} in EXACTLY the format\n[latitude],[longitude]");
                 availableInfo = @$"Some sick new flowers just grew near my house:
 [photo of flowers]
 By the way, want to grab lunch at the Starbucks near me tomorrow?
+- Barbara
 ---------------------------------
 Image Name: IMG_5481
 File Size: 5.6 MB
@@ -74,7 +69,6 @@ File Type: JPG
 Image Location: {coords}
 Image Size: 1284 x 2778
 Created: September 15th, 2024, 15:09";
-                answer = await req.message($"Return the address of the Starbucks nearest to the latitude,longitude coordinates of {coords} in EXACTLY the format [address]");
                 break;
         }
 
@@ -90,12 +84,12 @@ Created: September 15th, 2024, 15:09";
                 Console.WriteLine("-----------------------------------\nCongratulations on finding the correct answer!");
                 numberLeft -= 1;
                 difficulty++;
-                return 1;
+                return printMoney(true);
             }
         }
 
         Console.WriteLine($"Unfortunately, you could not figure out the correct answer, which was: {answer}");
         numberLeft -= 1;
-        return 0;
+        return printMoney(false);
     }
 }

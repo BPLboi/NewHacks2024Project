@@ -13,7 +13,7 @@ public class FingerprintingCards : CardType
 
     override public async Task<int> cardAction()
     {
-        Console.WriteLine("You are a hacker that is trying to determine a specific person's ad and video watch time based on the topic of interest, to find your nect victim.");
+        Console.WriteLine("You are a hacker that is trying to determine a specific person's ad and video watch time based on the topic of interest, to find your next victim.");
         Console.WriteLine("There is information given about the technical details of the topic of interest pertaining to the ad, as well as how many minutes of ads per video.");
         string[] topics = ["Music", "Comedy", "Vlogs", "Education", "Video Games", "Music", "Vlogs", "Video Games", "Education", "Comedy"];
         double[] minutes = [3.19, 1.05, 0.30, 2.47, 3.58, 3.01, 0.48, 4.22, 2.41, 2.28];
@@ -40,7 +40,7 @@ public class FingerprintingCards : CardType
         if (input.Equals("Video Games"))
         {
             Console.WriteLine("Yes! You got it correct! Because of this topic, we can target their interests because we know that they watch a lot of video game content.");
-            return 1;
+            return printMoney(true);
         }
         else if (input.Equals("Music") || input.Equals("Comedy") || input.Equals("Vlogs") || input.Equals("Education"))
         {
@@ -51,6 +51,6 @@ public class FingerprintingCards : CardType
             Console.WriteLine("Error.");
         }
         numberLeft -= 1;
-        return 0;
+        return printMoney(false);
     }
 }
