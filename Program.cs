@@ -63,13 +63,13 @@ class Program
         Console.WriteLine($"You finished the game with ${money}\n\n");
         if (money > 0)
         {
-            Console.WriteLine("Congratulations, you've exploited the system and walked away with a profit.");
+            Console.WriteLine("Congratulations, you've exploited the system and walked away with a profit.\n");
         }
         else
         {
-            Console.WriteLine("The tables have turned. You've run out of funds, and it looks like this hacking journey has come to a costly end.");
+            Console.WriteLine("The tables have turned. You've run out of funds, and it looks like this hacking journey has come to a costly end.\n");
         }
-        Console.WriteLine("Congratulations, you've walked the path of a hacker, exploiting weaknesses and cashing in on the innocent. But remember, for every attack, there are real-world consequences. Every vulnerability you exposed today reminds us of the importance of cybersecurity. In a world driven by data, even small breaches can have massive repercussions. Through this game, you've seen firsthand the power of security measures—how even a single password manager or an input filter can prevent an attack and save millions. The takeaway? Cybersecurity isn't just a layer; it's a lifeline. So, whether you're on the offense or defense, consider what you've learned, and recognize the critical role you play in a digital society.");
-        Console.WriteLine("Thank you for playing. Stay vigilant, and remember: the internet is only as secure as we make it. Game over.");
+        Console.WriteLine("Today, you've walked the path of a hacker, exploiting weaknesses and cashing in on the innocent. But remember, for every attack, there are real-world consequences. Every vulnerability you exposed today reminds us of the importance of cybersecurity. In a world driven by data, even small breaches can have massive repercussions. Through this game, you've seen firsthand the power of security measures—how even a single password manager or an input filter can prevent an attack and save millions. The takeaway? Cybersecurity isn't just a layer; it's a lifeline. So, whether you're on the offense or defense, consider what you've learned, and recognize the critical role you play in a digital society.");
+        Console.WriteLine("Thank you for playing. Stay vigilant, and remember: the internet is only as secure as we make it.\nGame over.");
     }
 }
