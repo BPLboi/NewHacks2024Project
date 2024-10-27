@@ -1,8 +1,8 @@
 # 🥷 Data Heist
 *A game on cybersecurity where you play as the hacker*
 
-![game3](https://github.com/user-attachments/assets/209a45c5-ceed-44ff-9b5f-7613bbc5f097)
-[watch on asciinema](https://asciinema.org/a/0Fiwq2O2YknyI3gy4DrDBb5pP)
+![color2](https://github.com/user-attachments/assets/b87d21b7-afde-4c30-8009-683770731e6b)
+[watch on asciinema](https://asciinema.org/a/KLQQkmolAvjRwv5XI3HITo4qG) | [watch non-color version](https://asciinema.org/a/0Fiwq2O2YknyI3gy4DrDBb5pP)
 
 ## 💡 Concept
 
