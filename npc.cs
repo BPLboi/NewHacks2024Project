@@ -12,6 +12,14 @@ public class NPC
         "Uses password manager",
         "Installs security updates"
     };
+
+    static List<string> randInterests = ["Photography", "Hiking", "Cooking", "Gardening", "Reading",
+     "Traveling", "Painting", "Knitting", "Yoga", "Gaming", "Birdwatching", "Astronomy", "Volunteering",
+      "Writing", "Music production", "Surfing", "Martial arts", "Cycling", "Collecting stamps", "Baking",
+       "Fishing", "Stand-up comedy", "Woodworking", "Pottery", "History", "Meditation", "Dancing", "Scuba diving",
+        "Fashion design", "Rock climbing", "Journaling", "Language learning", "Theater", "Podcasting", "Coding",
+         "Calligraphy", "Vintage cars", "Home brewing", "Magic tricks", "Sports analytics", "Sculpting"];
+
     public string npcName = "";
     string npcDesc = "";
     // generate using Gemini API calls
@@ -34,12 +42,15 @@ public class NPC
             }
         }
 
-        GeminiRequester req = new GeminiRequester();
-        if (npc.defensesArray.Length == 0) {
-            npc.npcDesc = await req.message($"Return a creative, quirky one-sentence bio for {npc.npcName} written from the perspective of {npc.npcName}. IF you don't have enough information, invent something cool.");
-        } else {
-            npc.npcDesc = await req.message($"Return a one-sentence bio for {npc.npcName} written from the perspective of {npc.npcName}, a person who {string.Join(", ", npc.defenses)}. IF you don't have enough information, invent something cool.");
+        while (npc.defenses.Count < 3)
+        {
+            string interest = randInterests[rn.Next(randInterests.Count)];
+            randInterests.Remove(interest);
+            npc.defenses.Add(interest);
         }
+
+        GeminiRequester req = new GeminiRequester();
+        npc.npcDesc = await req.message($"Return a one-sentence bio for {npc.npcName} written from the perspective of {npc.npcName}, a person who {string.Join(", ", npc.defenses)}.");
         npc.npcDesc = npc.npcDesc.Trim();
         return npc;
     }

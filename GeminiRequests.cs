@@ -42,22 +42,22 @@ public class GeminiRequester
 
         //Gets a response
         var responseData = await response.Content.ReadAsStringAsync();
-        Response responseVariable = JsonConvert.DeserializeObject<Response>(responseData);
-        Content responseContent = responseVariable.candidates[0].content;
 
-        //Stores the response in the conversation
-        conversation.contents.Add(responseContent);
 
         //Returns the response text
         try
         {
+            Response responseVariable = JsonConvert.DeserializeObject<Response>(responseData);
+            Content responseContent = responseVariable.candidates[0].content;
+
+            //Stores the response in the conversation
+            conversation.contents.Add(responseContent);
             return responseContent.parts[0].text;
         }
         catch
         {
             Console.WriteLine("Request produced an error. Raw response data: \n" + responseData);
             return null;
-
         }
     }
 }

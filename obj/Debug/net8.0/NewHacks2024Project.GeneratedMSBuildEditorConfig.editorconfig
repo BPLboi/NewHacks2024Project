@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = NewHacks2024Project
-build_property.ProjectDir = /Users/ayushiagrawal/Documents/UofT/2 2T4F/NewHacks/Spam game project/cliGame/NewHacks2024Project/
+build_property.ProjectDir = /home/boyan/Projects/NewHacks2024Project/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

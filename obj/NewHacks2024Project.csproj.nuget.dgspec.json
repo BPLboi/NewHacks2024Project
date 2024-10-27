@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/ayushiagrawal/Documents/UofT/2 2T4F/NewHacks/Spam game project/cliGame/NewHacks2024Project/NewHacks2024Project.csproj": {}
+    "/home/boyan/Projects/NewHacks2024Project/NewHacks2024Project.csproj": {}
   },
   "projects": {
-    "/Users/ayushiagrawal/Documents/UofT/2 2T4F/NewHacks/Spam game project/cliGame/NewHacks2024Project/NewHacks2024Project.csproj": {
+    "/home/boyan/Projects/NewHacks2024Project/NewHacks2024Project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/ayushiagrawal/Documents/UofT/2 2T4F/NewHacks/Spam game project/cliGame/NewHacks2024Project/NewHacks2024Project.csproj",
+        "projectUniqueName": "/home/boyan/Projects/NewHacks2024Project/NewHacks2024Project.csproj",
         "projectName": "NewHacks2024Project",
-        "projectPath": "/Users/ayushiagrawal/Documents/UofT/2 2T4F/NewHacks/Spam game project/cliGame/NewHacks2024Project/NewHacks2024Project.csproj",
-        "packagesPath": "/Users/ayushiagrawal/.nuget/packages/",
-        "outputPath": "/Users/ayushiagrawal/Documents/UofT/2 2T4F/NewHacks/Spam game project/cliGame/NewHacks2024Project/obj/",
+        "projectPath": "/home/boyan/Projects/NewHacks2024Project/NewHacks2024Project.csproj",
+        "packagesPath": "/home/boyan/.nuget/packages/",
+        "outputPath": "/home/boyan/Projects/NewHacks2024Project/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/ayushiagrawal/.nuget/NuGet/NuGet.Config"
+          "/home/boyan/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -59,7 +59,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.110/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
