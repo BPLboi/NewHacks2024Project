@@ -32,7 +32,6 @@ A top-down view of the game world where the player's character would be able to 
 
 
 ![Unity card setup](https://github.com/user-attachments/assets/9cfd5e30-0d67-4d7d-8b1b-56cead6a5c07)
-
 A sample layout that would be brought up when the user interacts with an NPC. The randomly generated Attack Cards are in the user's hand at the bottom, with space for NPCs and NPC descriptions at the top.
 
 ## 🛠️ Technicalities
@@ -44,3 +43,5 @@ Since our goal was to create a Unity project, our code is written in C#. We used
 - Create playable 2D platformer game in Unity
 - Enable attacks against organizations instead of just individuals, using different attack types eg. SQL Injection
 - Add functionality to existing attacks to increase interactivity and engagement
+- Refine code structure to make it more extensible
+- Refine input functions and error handling to catch edge cases and provide better user experience
