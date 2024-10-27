@@ -87,6 +87,6 @@ class Program
         Console.WriteLine("In a world driven by data, even small breaches can have massive repercussions.");
         Console.WriteLine("Through this game, you've seen firsthand the power of security measures—how even a single password manager or an input filter can prevent an attack and save millions.");
         Console.WriteLine("The takeaway? Cybersecurity isn't just a layer; it's a lifeline.\nSo, whether you're on the offense or defense, consider what you've learned, and recognize the critical role you play in a digital society.\n");
-        Console.WriteLine("Thank you for playing. Stay vigilant, and remember: the internet is only as secure as we make it.\nGame over.");
+        Console.WriteLine("\u001b[1;31m{Thank you for playing. Stay vigilant, and remember: the internet is only as secure as we make it.\nGame over.}\u001b");
     }
 }
