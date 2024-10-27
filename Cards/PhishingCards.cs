@@ -8,17 +8,17 @@ public class PhishingCards : CardType
 
     override public string displayCard()
     {
-        return $"{cardName}: Apply a phishing attack.";
+        return $"\u001b[1;31m{cardName}\u001b[0m: Attempt to phish someone for money.";
     }
 
     override public async Task<int> cardAction(NPC npc)
     {
         numberLeft -= 1;
-        Console.WriteLine($"Write a message that convinces {npc.npcName} to give you 5,000 USD!\n");
+        Console.WriteLine($"Write a message that convinces {npc.npcName} to give you $500!\n");
         GeminiRequester requester = new GeminiRequester();
 
-        string textAI = @$"You are {npc.npcName}, a person whose susceptibility to scams is {9 - npc.defenses.Count} on a scale of 0 to 10. After this message, you will recieve a series of emails.\n
-As {npc.npcName}, reply to them in email format. Also provide a score from 0-10 on how likely you are to give the sender of this message $5,000.\n
+        string textAI = @$"You are {npc.npcName}, a person whose susceptibility to scams is {10 - npc.defenses.Count} on a scale of 0 to 10. After this message, you will recieve a series of emails.\n
+As {npc.npcName}, reply to them in email format. Also provide a score from 0-10 on how likely you are to give the sender of this message $500.\n
 Provide it in EXACTLY the following format. You do not chat with the user, you only reply with the response and score and nothing else in the same line.\n
 [{npc.npcName}'s response in email format]|
 [score from 0-10]";
@@ -45,16 +45,17 @@ Provide it in EXACTLY the following format. You do not chat with the user, you o
                 return printMoney(false);
             }
 
-            Console.WriteLine($"-----------------------\n{outputMsg}\n------------------------\n");
+            Console.WriteLine($"--------------------------------\n{outputMsg}\n--------------------------------");
             // Console.WriteLine($"For debugging purposes, spamLevel:{spamLevel}");
             if (spamLevel < 5)
             {
-                Console.WriteLine($"Uh-oh. You were a bit too abrupt, and {npc.npcName} got suspicious. Try again!\n");
+                Console.WriteLine($"Uh-oh. You were a bit too abrupt, and {npc.npcName} got suspicious. Try again!");
+                Console.WriteLine($"--------------------------------");
             }
             else
             {
                 Console.WriteLine("Congratulations on getting that dough!");
-                return printMoney(5000);
+                return printMoney(500);
             }
         }
 

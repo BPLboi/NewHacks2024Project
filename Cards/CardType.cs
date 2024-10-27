@@ -11,11 +11,12 @@ public abstract class CardType
         {
             Random rn = new Random(Guid.NewGuid().GetHashCode());
             num = rn.Next(500);
-            Console.WriteLine($"You maliciously earned ${num}!\n");
+            Console.WriteLine($"You maliciously earned ${num}!");
         }
         else
         {
-            num = -30;
+            Random rn = new Random(Guid.NewGuid().GetHashCode());
+            num = -(30 + rn.Next(70));
             Console.WriteLine($"You wasted ${-num} on that attack :(");
         }
         return num;
@@ -24,7 +25,7 @@ public abstract class CardType
     {
         if (num >= 0)
         {
-            Console.WriteLine($"You maliciously earned ${num}!\n");
+            Console.WriteLine($"You maliciously earned ${num}!");
         }
         else
         {

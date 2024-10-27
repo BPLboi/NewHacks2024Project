@@ -12,7 +12,7 @@ class Program
         Deck cardDeck = new Deck([phish, fingerprint, hack, pitm, metadata], 4);
 
         //Sets up a list of NPCs
-        NPC[] npcs = new NPC[5];
+        NPC[] npcs = new NPC[3];
         for (int i = 0; i < npcs.Length; i++)
         {
             npcs[i] = await NPC.CreateNPC();
@@ -21,20 +21,29 @@ class Program
         int money = 0;
 
         // initial game
-        Console.WriteLine("Welcome to Data Heist!\nYou are a hacker.\nYour goal is to steal data and money from the innocent Barbaras of this world.");
-        Console.WriteLine("Use the attack cards wisely to maximise your profit.\n\n");
+        Console.WriteLine("Welcome to Data Heist!\nYou are a hacker.\nYour goal is to steal data and money from the innocent Barbara-s of this world.");
+        Console.WriteLine("Use the attack cards wisely to maximise your profit.");
 
         //As long as there are cards to choose from, lets the user pick a card to play
         do
         {
-            Console.WriteLine($"You currently have ${money}\n\n");
-            Console.WriteLine($"Choose your target:\n");
+            Console.WriteLine("--------------------------------");
+            if (money < 0)
+            {
+                Console.WriteLine($"You currently have -${-money}");
+            }
+            else
+            {
+                Console.WriteLine($"You currently have ${money}");
+            }
+            Console.WriteLine("--------------------------------");
+            Console.WriteLine($"Choose your target:");
             for (int i = 0; i < npcs.Length; i++)
             {
                 npcs[i].DisplayNPC();
             }
             Console.WriteLine("--------------------------------");
-            string npcSelected = Console.ReadLine();
+            string npcSelected = Console.ReadLine().Trim();
             NPC npc = null;
             bool npcMatched = false;
             for (int i = 0; i < npcs.Length; ++i)
@@ -47,14 +56,15 @@ class Program
             }
             if (!npcMatched)
             {
-                Console.WriteLine("Could not find your victim\n\n");
+                Console.WriteLine("Could not find your victim");
                 continue;
             }
             Console.WriteLine("--------------------------------");
-            Console.WriteLine("Pick one of the following cyber attack cards:\n");
-            Console.WriteLine(cardDeck.displayCardsInHand());
+            Console.WriteLine("Pick one of the following cyber attack cards:");
+            Console.WriteLine(cardDeck.displayCardsInHand().Trim('\n'));
             Console.WriteLine("--------------------------------");
-            string cardSelected = Console.ReadLine();
+            string cardSelected = Console.ReadLine().Trim();
+            Console.WriteLine("--------------------------------");
             money += await cardDeck.selectCard(cardSelected, npc);
         } while (!cardDeck.isOver());
 

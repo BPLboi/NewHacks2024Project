@@ -12,7 +12,7 @@ public class MetadataCards : CardType
 
     override public string displayCard()
     {
-        return $"{cardName}: Apply a metadata attack.";
+        return $"\u001b[1;32m{cardName}\u001b[0m: Use the metadata of someone's message to infer personal information.";
     }
 
     static string ordinal_suffix_of(int i)
@@ -63,7 +63,7 @@ public class MetadataCards : CardType
 [photo of flowers]
 By the way, want to grab lunch at the Starbucks near me tomorrow?
 - {npc.npcName}
----------------------------------
+--------------------------------
 Image Name: IMG_5481
 File Size: 5.6 MB
 File Type: JPG
@@ -74,17 +74,22 @@ Created: September 15th, 2024, 15:09";
         }
 
         Console.WriteLine(availableInfo);
-        Console.WriteLine("-----------------------------");
+        Console.WriteLine("--------------------------------");
         Console.WriteLine(question);
 
         for (int trials = 0; trials < 5; trials++)
         {
             string input = Console.ReadLine();
+            Console.WriteLine("--------------------------------");
             if (input.Equals(answer))
             {
-                Console.WriteLine("-----------------------------------\nCongratulations on finding the correct answer!");
+                Console.WriteLine("Congratulations on finding the correct answer!");
                 difficulty++;
                 return printMoney(true);
+            }
+            else
+            {
+                Console.WriteLine("Try again:");
             }
         }
 

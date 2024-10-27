@@ -1,6 +1,5 @@
 public class HackCards : CardType
 {
-    int increment;
     public HackCards(int numCards)
     {
         numberLeft = numCards;
@@ -9,7 +8,7 @@ public class HackCards : CardType
 
     override public string displayCard()
     {
-        return $"{cardName}: Apply a hacking attack.";
+        return $"\u001b[1;33m{cardName}\u001b[0m: Attempt to hack someone's device.";
     }
 
     override public async Task<int> cardAction(NPC npc)
@@ -18,6 +17,11 @@ public class HackCards : CardType
         if (npc.defenses.Contains("Installs security updates"))
         {
             Console.WriteLine($"Uh-oh. {npc.npcName}'s security updates were too strong for your hacks.");
+            return printMoney(false);
+        }
+        if (npc.defenses.Contains("Uses antivirus software"))
+        {
+            Console.WriteLine($"Uh-oh. {npc.npcName}'s antivirus software deleted your malware.");
             return printMoney(false);
         }
 

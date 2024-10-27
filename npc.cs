@@ -57,6 +57,6 @@ public class NPC
 
     public void DisplayNPC()
     {
-        Console.WriteLine($"{npcName}: {npcDesc}");
+        Console.WriteLine($"\u001b[4m{npcName}\u001b[0m: {npcDesc}");
     }
 }

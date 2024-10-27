@@ -38,3 +38,5 @@ Since our goal was to create a Unity project, our code is written in C#. We used
 - Add functionality to existing attacks to increase interactivity and engagement
 - Refine code structure to make it more extensible
 - Refine input functions and error handling to catch edge cases and provide better user experience
+- Create additional levels with increasing difficulty
+- Add a store where the player can use earned money to buy upgrades eg. stronger attacks, power ups (auto-detect best attack for chosen victim)
