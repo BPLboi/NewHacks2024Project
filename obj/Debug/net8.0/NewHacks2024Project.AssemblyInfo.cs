@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NewHacks2024Project")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4e44434c452495334c04ab5e4c12097a7a094ee7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a7e3983436abb1a11f78d25c1e620da4eb6c8e29")]
 [assembly: System.Reflection.AssemblyProductAttribute("NewHacks2024Project")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NewHacks2024Project")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

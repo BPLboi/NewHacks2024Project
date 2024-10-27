@@ -56,7 +56,7 @@ public class MetadataCards : CardType
             case 2 or 3:
                 question = $"Can you find out which city {npc.npcName} lives in?";
                 GeminiRequester req = new GeminiRequester();
-                string city = await req.message("Pick a random city and respond in EXACTLY the format [city]");
+                string city = (await req.message("Pick a random city and respond in EXACTLY the format [city]")).Trim();
                 answer = city.Substring(1, city.Length - 2);
                 string coords = await req.message($"Return the latitude and longitude coordinates of {city} in EXACTLY the format\n[latitude],[longitude]");
                 availableInfo = @$"Some sick new flowers just grew near my house:

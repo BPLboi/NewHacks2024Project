@@ -26,7 +26,7 @@ public class FingerprintingCards : CardType
         string input = Console.ReadLine();
         if (input.Equals("Video Games"))
         {
-            Console.WriteLine("Yes! You got it correct! The topic Video Games is definetly a topic that this user is interested in.");
+            Console.WriteLine("Yes! You got it correct! The topic Video Games is definitely a topic that this user is interested in.");
         }
         else if (input.Equals("Music") || input.Equals("Comedy") || input.Equals("Vlogs") || input.Equals("Education"))
         {

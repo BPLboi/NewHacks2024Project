@@ -17,9 +17,9 @@ public class PhishingCards : CardType
         GeminiRequester requester = new GeminiRequester();
 
         string textAI = @$"You are {npc.npcName}, a person whose susceptibility to scams is {9 - npc.defenses.Count} on a scale of 0 to 10. After this message, you will recieve a series of emails.\n
-As Barbara, reply to them in email format. Also provide a score from 0-10 on how likely you are to give the sender of this message $5,000.\n
+As {npc.npcName}, reply to them in email format. Also provide a score from 0-10 on how likely you are to give the sender of this message $5,000.\n
 Provide it in EXACTLY the following format. You do not chat with the user, you only reply with the response and score and nothing else in the same line.\n
-[Barbara's response in email format]|
+[{npc.npcName}'s response in email format]|
 [score from 0-10]";
 
         await requester.message(textAI);

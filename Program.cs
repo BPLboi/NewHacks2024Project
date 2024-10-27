@@ -21,7 +21,7 @@ class Program
         int money = 0;
 
         // initial game
-        Console.WriteLine("Welcome.\nYou are a hacker.\nYour goal is to steal data and money from the innocent Barbaras of this world.");
+        Console.WriteLine("Welcome to Data Heist!\nYou are a hacker.\nYour goal is to steal data and money from the innocent Barbaras of this world.");
         Console.WriteLine("Use the attack cards wisely to maximise your profit.\n\n");
 
         //As long as there are cards to choose from, lets the user pick a card to play

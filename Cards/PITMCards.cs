@@ -38,11 +38,11 @@ What Category of Personal Information? [Category Written Here]";
         String[] responseLines = geminiMsg.Split(['|']);
 
         string outputMsg;
-        string yorN;
-        string whySo;
+        string hasInfo;
+        string whyHasInfo;
         try
         {
-            (outputMsg, yorN, whySo) = (responseLines[0].Trim(), responseLines[1].Trim(), responseLines[2].Trim());
+            (outputMsg, hasInfo, whyHasInfo) = (responseLines[0].Trim(), responseLines[1].Trim(), responseLines[2].Trim());
         }
         catch
         {
@@ -54,23 +54,25 @@ What Category of Personal Information? [Category Written Here]";
         for (int i = 0; i < tries; i++)
         {
             string inputMsg = Console.ReadLine();
-            if (inputMsg.Contains("Y") && yorN.Contains("Y"))
+            if (inputMsg.Contains("Y") && hasInfo.Contains("Y"))
             {
-                Console.WriteLine("Yes! This does contain personal information. This is because of: " + whySo + ".");
+                Console.WriteLine("Yes! This does contain personal information. This is because of: " + whyHasInfo + ".");
                 return printMoney(true);
             }
-            else if (inputMsg.Contains("N") && yorN.Contains("N"))
+            else if (inputMsg.Contains("N") && hasInfo.Contains("N"))
             {
                 Console.WriteLine("Yes! This does NOT contain personal information. There is no relevant information given from the text above that shows there is something related to the person.");
-                return printMoney(true);
+                return printMoney(false);
             }
-            else if (inputMsg.Contains("N") && yorN.Contains("Y"))
+            else if (inputMsg.Contains("N") && hasInfo.Contains("Y"))
             {
-                Console.WriteLine("Whoa, be careful of how you analyze the online message! This contains personal information as it falls under the category of: " + whySo + ".");
+                Console.WriteLine("Whoa, be careful of how you analyze the online message! This contains personal information as it falls under the category of: " + whyHasInfo + ".");
+                return printMoney(false);
             }
-            else if (inputMsg.Contains("Y") && yorN.Contains("N"))
+            else if (inputMsg.Contains("Y") && hasInfo.Contains("N"))
             {
                 Console.WriteLine("You might have taken this prompt too seriously! This does NOT contain any information relevant to the person.");
+                return printMoney(false);
             }
             else
             {
