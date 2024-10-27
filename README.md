@@ -25,14 +25,7 @@ The game ends when all Attack Cards are exhausted.
 
 Our initial plan was to create a full 2D playable version of the game, but due to time constraints, we had to split it into 2D Unity mockups and a terminal-based functional game.
 
-
-<img width="569" alt="2D game field" src="https://github.com/user-attachments/assets/3297aca5-227b-4160-bd19-319bf311b857">
-
-A top-down view of the game world where the player's character would be able to move around and interact with NPC characters (not pictured).
-
-
-![Unity card setup](https://github.com/user-attachments/assets/9cfd5e30-0d67-4d7d-8b1b-56cead6a5c07)
-A sample layout that would be brought up when the user interacts with an NPC. The randomly generated Attack Cards are in the user's hand at the bottom, with space for NPCs and NPC descriptions at the top.
+![Mockup v1](https://github.com/user-attachments/assets/dc8cff32-7cbf-472b-a156-6d379c01036d)
 
 ## 🛠️ Technicalities
 
