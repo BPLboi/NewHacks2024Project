@@ -35,7 +35,11 @@ public class NPC
         }
 
         GeminiRequester req = new GeminiRequester();
-        npc.npcDesc = await req.message($"Return a one-sentence bio for {npc.npcName} written from the perspective of {npc.npcName}, a person who {string.Join(", ", npc.defenses)}");
+        if (npc.defensesArray.Length == 0) {
+            npc.npcDesc = await req.message($"Return a creative, quirky one-sentence bio for {npc.npcName} written from the perspective of {npc.npcName}");
+        } else {
+            npc.npcDesc = await req.message($"Return a one-sentence bio for {npc.npcName} written from the perspective of {npc.npcName}, a person who {string.Join(", ", npc.defenses)}");
+        }
         npc.npcDesc = npc.npcDesc.Trim();
         return npc;
     }
