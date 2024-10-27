@@ -50,7 +50,7 @@ public class Deck
         return null;
     }
 
-    public async Task<int> selectCard(string choice)
+    public async Task<int> selectCard(string choice, NPC npc)
     {
         for (int i = 0; i < inHand.Length; i++)
         {
@@ -58,7 +58,7 @@ public class Deck
             if (inHand[i].cardName.Equals(choice))
             {
                 cardsInHand -= 1;
-                int result = await inHand[i].cardAction();
+                int result = await inHand[i].cardAction(npc);
 
                 inHand[i] = GetCard();
                 return result;

@@ -11,8 +11,9 @@ public class FingerprintingCards : CardType
         return $"{cardName}: Apply a fingerprinting attack.";
     }
 
-    override public async Task<int> cardAction()
+    override public async Task<int> cardAction(NPC npc)
     {
+        numberLeft -= 1;
         Console.WriteLine("You are a hacker that is trying to determine a specific person's ad and video watch time based on the topic of interest, to find your next victim.");
         Console.WriteLine("There is information given about the technical details of the topic of interest pertaining to the ad, as well as how many minutes of ads per video.");
         string[] topics = ["Music", "Comedy", "Vlogs", "Education", "Video Games", "Music", "Vlogs", "Video Games", "Education", "Comedy"];
@@ -50,7 +51,6 @@ public class FingerprintingCards : CardType
         {
             Console.WriteLine("Error.");
         }
-        numberLeft -= 1;
         return printMoney(false);
     }
 }

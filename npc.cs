@@ -1,5 +1,8 @@
+using System.Runtime.InteropServices;
+
 public class NPC
 {
+    static List<string> names = ["Barbara", "Ethan", "Ava", "Liam", "Sophia", "Noah", "Mia", "Mason", "Charlotte", "Jacob", "Amelia", "William", "Evelyn", "Michael", "Harper", "Benjamin", "Ella", "James", "Avery", "Logan"];
     string[] defensesArray = {
         "Uses a VPN",
         "Low digital footprint",
@@ -9,19 +12,18 @@ public class NPC
         "Uses password manager",
         "Installs security updates"
     };
-    string npcName = "";
+    public string npcName = "";
     string npcDesc = "";
     // generate using Gemini API calls
-    List<string> defenses = new List<string>();
+    public List<string> defenses = new List<string>();
 
-    public static async Task<NPC> CreateNPC(){
+    public static async Task<NPC> CreateNPC()
+    {
         NPC npc = new NPC();
-        GeminiRequester req = new GeminiRequester();
-        npc.npcName = await req.message(@"Produce a name like in the following example:
-Michelle
-Reply with JUST THIS INFORMATION. The formatting must match.");
 
         Random rn = new Random(Guid.NewGuid().GetHashCode());
+        npc.npcName = names[rn.Next(names.Count)];
+        names.Remove(npc.npcName);
 
         for (int i = 0; i < npc.defensesArray.Length; ++i)
         {
@@ -32,11 +34,14 @@ Reply with JUST THIS INFORMATION. The formatting must match.");
             }
         }
 
-        npc.npcDesc = await req.message($"Return a short bio for {npc.npcName} written from the perspective of {npc.npcName}, a person who {string.Join(", ", npc.defenses)}");
+        GeminiRequester req = new GeminiRequester();
+        npc.npcDesc = await req.message($"Return a one-sentence bio for {npc.npcName} written from the perspective of {npc.npcName}, a person who {string.Join(", ", npc.defenses)}");
+        npc.npcDesc = npc.npcDesc.Trim();
         return npc;
     }
 
-    public void DisplayNPC(){
+    public void DisplayNPC()
+    {
         Console.WriteLine($"{npcName}: {npcDesc}");
     }
 }
